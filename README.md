@@ -19,4 +19,9 @@ Dự án thực nghiệm so sánh hiệu năng và tính toàn vẹn dữ liệu
 ## Nhận xét
 - Việc gọi `commit()` sau mỗi dòng ở phương pháp **Row-by-Row** tạo ra số lượng lớn giao dịch ghi đĩa (disk I/O), khiến thời gian thực thi tăng lên đáng kể.
 - Phương pháp **Batch** gom nhiều bản ghi trong mỗi giao dịch giúp giảm overhead của transaction và I/O, tăng tốc độ nạp lên **398.3x** mà vẫn đảm bảo tính chính xác tuyệt đối về số lượng dòng và các giá trị tổng hợp.
+# Dữ liệu dùng
+https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-02.parquet
+https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-03.parquet
+https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-04.parquet
+# Chuyển file parquet sang csv để dễ xử lý với "CSDL_1.py"
 # Chạy thử với bộ dữ liệu "yellow_tripdata_2024-02.csv"
